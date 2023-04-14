@@ -4,20 +4,151 @@
     box-sizing: border-box;
 }
 
+h1{
+    font-family: 'Rye', cursive;
+    text-align: center;
+
+    padding-top: 2.5em;
+}
+
+h2{
+    font-family: 'Rye', cursive;
+    text-align: center;
+    font-size: medium;
+
+    padding-bottom: 3em;
+}
+
 .slide__container{
     width: 500px;
     margin: auto;
+  
+    z-index: -10;
+    
     overflow: hidden;
+    display: grid;
+    grid-template-columns: 50px auto 50px;
+
+    box-shadow: 12px 12px 12px 1px rgba(0, 0, 0, 0.22);
+    
 }
 
 .inner__slider{
     display: flex;
-    width: 100%;
+    width: 300px;
     height: 500px;
+    grid-row: 1/2;
+    grid-column: 1/4;
+    z-index: -2;
+   
 }
 
 
-/* .animatedDiv--moved{
-    transition: 0.4ms ease;
+#nextBtn, #prevBtn {
+    z-index: 10;
     
-} */
+    border: none;
+    background-color: transparent;
+    font-size: 2em;
+    color: white;
+    
+}
+
+#nextBtn{
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+#prevBtn{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    
+}
+
+#prevBtn:hover {
+    background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0.6));
+    
+   
+}
+#nextBtn:hover {
+background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.6));
+}
+
+.slider__nav{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+
+}
+
+.slider__indicator{
+    border: 0;
+    border-radius: 50%;
+    width:20px;
+    height:20px;
+    
+    margin: 0 10px;
+
+    display:inline-block;
+    border-image: radial-gradient(rgba(0, 0, 0, 0.408) 69%,#0000 70%) 84.5% fill/100%;
+    clip-path: polygon(-41% 0,50% 91%, 141% 0);
+}
+
+.slider__indicator.current-slide{
+    border-image: radial-gradient(rgba(216, 143, 216, 0.873) 69%,#0000 70%) 84.5% fill/100%;
+}
+
+
+.qoute_img .slider__img{
+    position: relative;
+}
+
+.quote{
+    position: absolute;
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    width: 100%;
+
+    bottom: 20px;
+    right: 50px;
+    left: 0px;
+    right: auto;
+    margin-left: 100px;
+
+    background-color: rgba(255, 192, 203, 0.712);
+    border-radius: 50%;
+    padding: 1em;
+    color: white;
+    font-size: x-large;
+   
+}
+
+.quote .quote_span{
+    font-weight: 700;
+    font-size: x-large;
+    
+}
+
+.follow_button{
+    position: absolute;
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    width: 340px;
+    cursor: pointer;
+    margin-left: 5%;
+    box-shadow: 12px 12px 12px 3px rgba(0, 0, 0, 0.22);;
+    display: none;
+  
+    z-index: 9999;
+
+    bottom: 100px;
+
+    border-style: none;
+    border-radius: 5em;
+    background-color: rgb(255, 191, 0);
+    
+    padding:1%;
+    color: rgb(0, 0, 0);
+    font-size: x-large;
+    text-transform: uppercase; 
+}

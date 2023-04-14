@@ -1,32 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slider aflevering</title>
+    <title>Karrusel m. Pedro</title>
+
+    <!-- google fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h2>Opgaven der afleveres fredag</h2>
+    <h1>Karrusel m. Pedro</h1>
+        <h2>Opgaven der skal afleveres fredag</h2>
     <div class="slide__container">
-        
-        <div class="inner__slider">
-        <!-- <img src="/images/slider5.jpg" id="lastClone"> -->
-        <img src="/images/slider1.jpeg" alt="Et tilfældigt billede af en kat" class="slider__img">
-        <img src="/images/slider2.jpg" alt="Et helt tilfældigt billede" class="slider__img">
-        <img src="/images/slider3.jpeg" alt="Et helt tilfældigt billede" class="slider__img">
-        <img src="/images/slider4.jpg" alt="Et tilfældigt billede af bjørn" class="slider__img" >
-        <img src="/images/slider5.jpg" alt="Et tilfældigt billede af bacon" class="slider__img">
-        <!-- <img src="/images/slider1.jpeg" id="firstClone"> -->
-        
+        <button class="follow_button">Enjoy my Instagram here</button>
+
+        <div class="inner__slider carousel__track">
+
+            <!-- <img src="/images/slider5.jpg" id="lastClone"> -->
+            <div class="quote_img">
+                <div class="quote"> <span class="quote_span">"Daddy is a state of mind"</span> ~Pedro Pascal</div>
+                <img src="/images/pedro slider1.jpeg" alt="Pedro Pascal" class="slider__img">
+            </div>
+            <img src="/images/pedro-slider-2.jpeg" alt="Pedro Pascal" class="slider__img">
+            <img src="/images/pedro-slider-3.jpeg" alt="Pedro Pascal" class="slider__img">
+            <img src="/images/pedro-slide4.jpeg" alt="Pedro Pascal" class="slider__img">
+            <img src="/images/pedro-slide5.jpeg" alt="Pedro Pascal" class="slider__img">
+
+            <!-- <div class="button_img">
+                <button class="follow_button">Follow me on instagram</button>
+                <img src="/images/pedro-slide5.jpeg" alt="Pedro Pascal" class="slider__img">
+            </div> -->
+            <!-- <img src="/images/slider1.jpeg" id="firstClone"> -->
         </div>
-        <button id="prevBtn">&lt;</button>
-        <button id="nextBtn">&gt;</button>
+
+        <button id="prevBtn"> &lt; </button>
+        <button id="nextBtn"> &gt; </button>
     </div>
-    
-    
-<script src="slider.js"></script>
+<div class="slider__nav">
+    <button class="slider__indicator current-slide" style="width:15px"></button>
+    <button class="slider__indicator" style="width:15px"></button>
+    <button class="slider__indicator" style="width:15px"></button>
+    <button class="slider__indicator" style="width:15px"></button>
+    <button class="slider__indicator" style="width:15px"></button>
+
+</div>
+
+    <script src="slider.js"></script>
 </body>
+
 </html>
